@@ -1,0 +1,205 @@
+@import 'components.scss';
+
+/* Base styles */
+body {
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+}
+
+.main {
+    max-width: 1200px;
+    padding-top: 50px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+/* Main content */
+.hero {
+    position: relative;
+    text-align: center;
+    &__banner{
+        position: relative;
+        background-image: url('/img/back1.png');
+        background-size: cover;
+        background-position: center;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        border: 5px solid #FC0;
+        padding: 20px;
+        }
+    &__overlay{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        }
+
+    &__gif{
+        position: relative;
+        width: 100%;
+        border: 5px solid #FC0;
+        margin-top: 40px;
+    }
+}
+
+.content{
+    
+    padding-left: 35px;
+    h1{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: Inter;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    p{
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px; /* 200% */
+        letter-spacing: 0.4px;  
+    }
+}
+
+.benefits {
+    padding: 40px 40px;
+    text-align: center;
+
+    &__title {
+        color: #000;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+.benefit {
+    flex: 1;
+    max-width: 30%;
+
+    &__title {
+        color: #000;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.75;
+        letter-spacing: 1px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main{
+        max-width: 600px;
+        padding-top: 50px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    .hero{
+        &__banner{
+            position: relative;
+            width: 80%;
+            height: 650px;
+            background-image: none;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            border: 5px solid #FC0;
+            margin: auto;
+            background-image: url('/img/back1.png');
+            background-size: cover;
+            background-position: center;
+        }
+        &__overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+        }
+    }
+    .content{
+        padding:0px 20px;
+        h1{
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            line-height: normal;
+        }
+        p{
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal; 
+        }
+    }
+    .benefits{
+        text-align: center; 
+        &__title {
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            line-height: normal;
+            margin:40px 0px;
+        }
+        &__grid{
+            flex-direction: column;
+
+        }
+            .benefit{
+                max-width: 100%;
+        &__title {
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            line-height: normal;
+            }        
+        &__text {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            }
+        } 
+       
+    }
+    .gif{
+        max-width: 100%;
+        height: auto; 
+        display: block;
+        }
+}

@@ -1,0 +1,144 @@
+@charset "UTF-8";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 5px solid #FC0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  transform: translateY(0);
+}
+.header.header--hidden {
+  transform: translateY(-100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 240px;
+}
+.nav__logo {
+  display: block;
+  height: 100px;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+.nav__link {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: #FC0;
+}
+
+.footer {
+  border-top: 5px solid #FC0;
+  background: #000;
+  color: #FFF;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer__section {
+  width: 30%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+}
+.footer__title {
+  color: #FC0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__link {
+  color: #FFF;
+  font-size: 18px;
+  line-height: 1.6;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__link:hover {
+  color: #FC0;
+}
+.footer__address {
+  font-style: normal;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .nav,
+  .footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .nav__list {
+    gap: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    height: auto;
+    padding: 10px;
+    justify-content: flex-start;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav__link {
+    font-size: 15px;
+  }
+  .nav__logo {
+    width: 100px;
+  }
+  .nav__logo img {
+    width: 100%;
+  }
+  .footer {
+    padding-left: 40px;
+  }
+  .footer p {
+    font-size: 10px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__section {
+    width: 100%;
+    margin: 10px;
+  }
+  .footer__link {
+    font-size: 10px;
+  }
+  .footer__title {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=components.css.map */

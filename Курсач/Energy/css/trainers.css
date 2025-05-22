@@ -1,0 +1,233 @@
+@charset "UTF-8";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 5px solid #FC0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  transform: translateY(0);
+}
+.header.header--hidden {
+  transform: translateY(-100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 240px;
+}
+.nav__logo {
+  display: block;
+  height: 100px;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+.nav__link {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: #FC0;
+}
+
+.footer {
+  border-top: 5px solid #FC0;
+  background: #000;
+  color: #FFF;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer__section {
+  width: 30%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+}
+.footer__title {
+  color: #FC0;
+  text-align: center;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__link {
+  color: #FFF;
+  font-size: 18px;
+  line-height: 1.6;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer__link:hover {
+  color: #FC0;
+}
+.footer__address {
+  font-style: normal;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+  .nav,
+  .footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .nav__list {
+    gap: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    height: auto;
+    padding: 10px;
+    justify-content: flex-start;
+  }
+  .nav__list {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav__link {
+    font-size: 15px;
+  }
+  .nav__logo {
+    width: 100px;
+  }
+  .nav__logo img {
+    width: 100%;
+  }
+  .footer {
+    padding-left: 40px;
+  }
+  .footer p {
+    font-size: 10px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__section {
+    width: 100%;
+    margin: 10px;
+  }
+  .footer__link {
+    font-size: 10px;
+  }
+  .footer__title {
+    font-size: 15px;
+  }
+}
+/* Базовые стили */
+body {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Секция тренеров */
+.trainers {
+  padding: 40px 120px;
+  background-color: #f9f9f9;
+}
+.trainers__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Максимум две карточки в ряду */
+  gap: 20px; /* Отступ между карточками */
+  justify-items: center; /* Центрирование карточек */
+  max-width: 1000px;
+  margin: 0 auto; /* Центрируем секцию */
+}
+
+/* Карточки тренеров */
+.trainer {
+  position: relative; /* Для размещения контента поверх фона */
+  background-size: contain; /* Фон сохраняет пропорции изображения */
+  background-repeat: no-repeat; /* Убираем повторение фона */
+  background-position: center; /* Центрируем изображение */
+  border-radius: 10px;
+  width: 100%; /* Занимает доступное пространство колонки */
+  height: 300px; /* Фиксированная высота карточки */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid #FC0;
+}
+.trainer:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.trainer__content {
+  position: absolute; /* Размещаем поверх фона */
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  padding: 1% 25% 1% 25%;
+  border-radius: 10px;
+}
+.trainer__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.trainer__button1, .trainer__button2, .trainer__button3, .trainer__button4 {
+  background-color: #FC0;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.trainer__button1:hover, .trainer__button2:hover, .trainer__button3:hover, .trainer__button4:hover {
+  background-color: #e6b800;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .trainers {
+    padding: 40px 60px;
+  }
+  .trainers__container {
+    grid-template-columns: 1fr; /* Одна карточка в ряду для маленьких экранов */
+    gap: 15px; /* Уменьшаем расстояние между карточками */
+  }
+  .trainer__name {
+    font-size: 18px; /* Уменьшенный размер текста для мобильных устройств */
+  }
+  .trainer__button {
+    font-size: 12px; /* Уменьшенная кнопка для мобильных устройств */
+  }
+}/*# sourceMappingURL=trainers.css.map */

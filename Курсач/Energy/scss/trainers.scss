@@ -1,0 +1,100 @@
+@import 'components.scss';
+
+/* Базовые стили */
+body {
+    margin: 0;
+    margin-top: 100px;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Секция тренеров */
+.trainers {
+    padding: 40px 120px;
+    background-color: #f9f9f9;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Максимум две карточки в ряду */
+        gap: 20px; /* Отступ между карточками */
+        justify-items: center; /* Центрирование карточек */
+        max-width: 1000px;
+        margin: 0 auto; /* Центрируем секцию */
+    }
+}
+
+/* Карточки тренеров */
+.trainer {
+    position: relative; /* Для размещения контента поверх фона */
+    background-size: contain; /* Фон сохраняет пропорции изображения */
+    background-repeat: no-repeat; /* Убираем повторение фона */
+    background-position: center; /* Центрируем изображение */
+    border-radius: 10px;
+    width: 100%; /* Занимает доступное пространство колонки */
+    height: 300px; /* Фиксированная высота карточки */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #FC0;
+
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &__content {
+        position: absolute; /* Размещаем поверх фона */
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+        color: #fff;
+        padding: 20px 10px;
+        text-align: center;
+        padding:1% 25% 1% 25%;
+        border-radius: 10px;
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__button1, &__button2, &__button3, &__button4 {
+        background-color: #FC0;
+        color: #000;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #e6b800;
+        }
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .trainers{
+        padding: 40px 60px;
+    }
+
+    .trainers__container {
+        grid-template-columns: 1fr; /* Одна карточка в ряду для маленьких экранов */
+        gap: 15px; /* Уменьшаем расстояние между карточками */
+    }
+
+    .trainer__name {
+        font-size: 18px; /* Уменьшенный размер текста для мобильных устройств */
+    }
+
+    .trainer__button  {
+        font-size: 12px; /* Уменьшенная кнопка для мобильных устройств */
+    }
+}
