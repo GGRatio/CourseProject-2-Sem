@@ -18,7 +18,7 @@
 
   trainerButtons3.forEach(button => {
       button.addEventListener('click', () => {
-          window.location.href = "C:/Users/burbl/Desktop/Курсовой проект/Energy/main.html";
+          window.location.href = "personality.html?id=3";
       });
   });
 

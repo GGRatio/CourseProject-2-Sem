@@ -1,6 +1,5 @@
 @import 'components.scss';
 
-/* Базовые стили */
 body {
     margin: 0;
     margin-top: 100px;
@@ -10,30 +9,28 @@ body {
     color: #000;
 }
 
-/* Секция тренеров */
 .trainers {
     padding: 40px 120px;
     background-color: #f9f9f9;
 
     &__container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Максимум две карточки в ряду */
-        gap: 20px; /* Отступ между карточками */
-        justify-items: center; /* Центрирование карточек */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        justify-items: center; 
         max-width: 1000px;
-        margin: 0 auto; /* Центрируем секцию */
+        margin: 0 auto;
     }
 }
 
-/* Карточки тренеров */
 .trainer {
-    position: relative; /* Для размещения контента поверх фона */
-    background-size: contain; /* Фон сохраняет пропорции изображения */
-    background-repeat: no-repeat; /* Убираем повторение фона */
-    background-position: center; /* Центрируем изображение */
+    position: relative; 
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
     border-radius: 10px;
-    width: 100%; /* Занимает доступное пространство колонки */
-    height: 300px; /* Фиксированная высота карточки */
+    width: 100%; 
+    height: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     border: 2px solid #FC0;
@@ -44,11 +41,11 @@ body {
     }
 
     &__content {
-        position: absolute; /* Размещаем поверх фона */
+        position: absolute;
         bottom: 0;
         left: 0;
         width: 50%;
-        background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для текста */
+        background: rgba(0, 0, 0, 0.6); 
         color: #fff;
         padding: 20px 10px;
         text-align: center;
@@ -79,22 +76,22 @@ body {
     }
 }
 
-/* Адаптивность */
+
 @media (max-width: 1024px) {
     .trainers{
         padding: 40px 60px;
     }
 
     .trainers__container {
-        grid-template-columns: 1fr; /* Одна карточка в ряду для маленьких экранов */
-        gap: 15px; /* Уменьшаем расстояние между карточками */
+        grid-template-columns: 1fr; 
+        gap: 15px;
     }
 
     .trainer__name {
-        font-size: 18px; /* Уменьшенный размер текста для мобильных устройств */
+        font-size: 18px;
     }
 
     .trainer__button  {
-        font-size: 12px; /* Уменьшенная кнопка для мобильных устройств */
+        font-size: 12px; 
     }
 }

@@ -1,6 +1,5 @@
 @import 'components.scss';
 
-/* Базовые стили для страницы */
 body {
     margin: 0;
     margin-top: 100px;
@@ -9,9 +8,6 @@ body {
     color: #000;
 }
 
-
-
-/* Стили секции программ */
 .programs {
     padding: 60px 240px;
     background-color: #f9f9f9;
@@ -38,7 +34,7 @@ body {
         transition: transform 0.3s;
 
         &:hover {
-            transform: scale(1.05); /* Эффект увеличения */
+            transform: scale(1.05);
         }
     }
 
@@ -50,7 +46,7 @@ body {
     }
 
     &__list {
-        flex-grow: 1; /* Растягиваем список, чтобы кнопки были на одном уровне */
+        flex-grow: 1; 
         list-style: none;
         padding: 0;
         margin: 0 0 20px;
@@ -58,7 +54,7 @@ body {
         text-align: left;
 
         li {
-            margin-bottom: 10px; /* Отступ между пунктами списка */
+            margin-bottom: 10px; 
         }
     }
 
@@ -79,18 +75,18 @@ body {
     }
 }
 
-/* Стили модального окна */
+
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    background-color: rgba(0, 0, 0, 0.5); 
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Высокий уровень слоя */
+    z-index: 1000;
 }
 
 .modal__content {
@@ -98,7 +94,7 @@ body {
     padding: 20px 40px;
     border-radius: 10px;
     max-width: 500px;
-    width: 100%; /* Адаптивная ширина */
+    width: 100%; 
 }
 
 .modal__close {
@@ -140,7 +136,6 @@ body {
     }
 }   
 
-/* Адаптивные стили */
 @media (max-width: 1200px) {
     .programs {
         padding: 40px 120px;
